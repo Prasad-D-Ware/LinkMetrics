@@ -70,28 +70,28 @@ const Login = () => {
 
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="text-center">
         <CardTitle>Login</CardTitle>
-        <CardDescription>
-          to your account if you already have one
-        </CardDescription>
+        <CardDescription>To access your links</CardDescription>
         {error && <Error message={error.message} />}
       </CardHeader>
       <CardContent className="space-y-2">
         <div className="space-y-1">
+          <label className="text-sm">Email </label>
           <Input
             name="email"
             type="email"
-            placeholder="Enter Email"
+            placeholder="example@gmail.com"
             onChange={handleInputChange}
           />
           {errors.email && <Error message={errors.email} />}
         </div>
         <div className="space-y-1">
+          <label className="text-sm">Password </label>
           <Input
             name="password"
             type="password"
-            placeholder="Enter Password"
+            placeholder="*******"
             onChange={handleInputChange}
           />
           {errors.password && <Error message={errors.password} />}
@@ -99,7 +99,7 @@ const Login = () => {
       </CardContent>
       <CardFooter>
         <Button onClick={handleLogin}>
-          {loading ? <BeatLoader size={10} color /> : "Login"}
+          {loading ? <BeatLoader size={10} /> : "Login"}
         </Button>
       </CardFooter>
     </Card>
