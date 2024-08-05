@@ -70,11 +70,11 @@ const Link = () => {
             {url?.title}
           </span>
           <a
-            href={`https://linkmetrics.com/${link}`}
+            href={`https://linkmetrics.vercel.app/${link}`}
             target="_blank"
             className="text-3xl sm:text-4xl text-blue-400 font-bold hover:underline cursor-pointer"
           >
-            https://linkmetrics.com/{link}
+            https://linkmetrics.vercel.app/{link}
           </a>
           <a
             href={url?.original_url}
@@ -92,7 +92,9 @@ const Link = () => {
               variant="ghost"
               onClick={() => {
                 //add any domain of your choice when u need to
-                navigator.clipboard.writeText(`https://${url?.short_url}`);
+                navigator.clipboard.writeText(
+                  `https://linkmetrics.vercel.app/${url?.short_url}`
+                );
               }}
             >
               <Copy />
