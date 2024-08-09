@@ -34,7 +34,7 @@ const LinkCard = ({ url, fetchUrls }) => {
         </span>
         <span className="text-2xl text-blue-400 font-bold hover:underline cursor-pointer">
           {/* add domain of ur choice when u need to  */}
-          https://
+          https://linkmetrics.vercel.app/
           {url?.custom_url ? url?.custom_url : url?.short_url}
         </span>
         <span className="flex items-center gap-1 hover:underline cursor-pointer">
@@ -50,7 +50,7 @@ const LinkCard = ({ url, fetchUrls }) => {
           variant="ghost"
           onClick={() => {
             //add any domain of your choice when u need to
-            navigator.clipboard.writeText(`https://${url?.short_url}`);
+            navigator.clipboard.writeText(`https://linkmetrics.vercel.app/${url?.short_url}`);
           }}
         >
           <Copy />
