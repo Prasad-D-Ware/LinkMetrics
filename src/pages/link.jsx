@@ -72,7 +72,7 @@ const Link = () => {
           <a
             href={`https://linkmetrics.vercel.app/${link}`}
             target="_blank"
-            className="text-3xl sm:text-4xl text-blue-400 font-bold hover:underline cursor-pointer"
+            className="md:text-3xl text-blue-400 font-bold hover:underline cursor-pointer"
           >
             https://linkmetrics.vercel.app/{link}
           </a>
@@ -93,7 +93,7 @@ const Link = () => {
               onClick={() => {
                 //add any domain of your choice when u need to
                 navigator.clipboard.writeText(
-                  `https://linkmetrics.vercel.app/${url?.short_url}`
+                  `https://linkmetrics.vercel.app/${url?.short_url}`,
                 );
               }}
             >
