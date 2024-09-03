@@ -27,7 +27,7 @@ export async function deleteUrl(id) {
 
 export async function createUrl(
   { title, longUrl, customUrl, user_id },
-  qrcode
+  qrcode,
 ) {
   const short_url = Math.random().toString(36).substring(2, 7);
   const fileName = `dp-${short_url}`;
@@ -66,7 +66,7 @@ export async function getLongUrl(id) {
     .from("urls")
     .select("id ,original_url")
     .or(`short_url.eq.${id},custom_url.eq.${id}`)
-    .single();
+    .maybeSingle();
 
   if (error) {
     console.error(error.message);
